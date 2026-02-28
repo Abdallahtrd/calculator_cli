@@ -43,4 +43,15 @@ def main():
     print(result)
 
 
-main()
+while True:
+    main()
+    run_choice = input("Do you want to make a new calculation? y/n ").lower()
+    if run_choice == 'y':
+        pass
+    elif run_choice == 'no':
+        break
+    else:
+        print("Wrong Input Please Try Again!!")
+         
+        
+    
