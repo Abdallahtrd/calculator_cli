@@ -24,33 +24,26 @@ def calculation(first_number, second_number, operator):#This is the processor fu
 
         if operator == '+':
             result = first_number + second_number
-            record = f"{first_number} {operator} {second_number} = {result:.2f}"
-            history.append(record)
-            return result
-        
+            
         elif operator == '-':
             result = first_number - second_number
-            record = f"{first_number} {operator} {second_number} = {result:.2f}"
-            history.append(record)
-            return result
-    
+            
         elif operator == '*':
             result = first_number * second_number
-            record = f"{first_number} {operator} {second_number} = {result:.2f}"
-            history.append(record)
-            return result
-    
-        elif operator == '/':
+               
+        elif operator == '/': 
             result = first_number / second_number
-            record = f"{first_number} {operator} {second_number} = {result:.2f}"
-            history.append(record)
-            return result
+                
         else:
              print("Invalid operation")
         
-        
-        
+        record = f"{first_number} {operator} {second_number} = {result:.2f}"
+        history.append(record)  
 
+        return result  
+        
+        
+        
 def main():#The main function orchrestrates the logic and the arrangement of how their run.
 
     first_number = collect_number()
@@ -65,12 +58,14 @@ main()#In order for it to be like a real calculator it is assumed that the momen
 #here once before the loop
 
 
-while True:#This loop makes it run infinitely until told to stop.
+while True:#This loop makes it run infinitely until told to stop.s
     run_choice = input("Choose: (C)alculation, (H)istory, (Q)uit: ").lower()
     if run_choice == 'c':
         main()#Main is called here for enable calculation after choice.
     elif run_choice == 'h':
-        print(history)
+        for index, record in enumerate(history, start=1):
+            print(index, record) 
+
     elif run_choice == 'q':
         break
     else:#This is the part that asks the user again after an invalid input in run_choice. 
