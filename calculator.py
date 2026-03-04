@@ -20,7 +20,8 @@ def collect_operation():#This collects the operator choice and returns the value
         return operator
 
 def calculation(first_number, second_number, operator):#This is the processor function that 
-    #does all the callculations based on choice and returns each one. 
+    #does all the calculations based on choice and appends each calculation into history 
+    # then returns the answer. 
 
         if operator == '+':
             result = first_number + second_number
@@ -62,7 +63,8 @@ while True:#This loop makes it run infinitely until told to stop.s
     run_choice = input("Choose: (C)alculation, (H)istory, (Q)uit: ").lower()
     if run_choice == 'c':
         main()#Main is called here for enable calculation after choice.
-    elif run_choice == 'h':
+
+    elif run_choice == 'h':#Added the history choice in menu selection.
         for index, record in enumerate(history, start=1):
             print(index, record) 
 
@@ -70,7 +72,7 @@ while True:#This loop makes it run infinitely until told to stop.s
         break
     else:#This is the part that asks the user again after an invalid input in run_choice. 
         print("Invalid Input")
-        continue
+        continue #continue takes the user back to the beginning of the loop instead of ending the program.
     
         
     
