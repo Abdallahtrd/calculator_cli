@@ -13,4 +13,4 @@ Collect numbers from user
 Choose an operation (+,-,*,/)
 Display the result
 Handle invalid input safely
-
+Show calculation history
