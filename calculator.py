@@ -66,7 +66,7 @@ while True:#This loop makes it run infinitely until told to stop.s
 
     elif run_choice == 'h':#Added the history choice in menu selection.
         for index, record in enumerate(history, start=1):
-            print(index, record) 
+            print(f"{index}. {record}") 
 
     elif run_choice == 'q':
         break
